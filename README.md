@@ -1,5 +1,3 @@
-![newsletter_every_fri](https://github.com/deep-diver/fb-group-post-fetcher/workflows/newsletter_every_fri/badge.svg?branch=master)
-
 # Facebook Group Post Fetcher + Emailing
 
 <img src="https://github.com/deep-diver/fb-group-post-fetcher/blob/master/static/images/process.png?raw=true" width="550px"/>
