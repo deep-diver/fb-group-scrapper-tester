@@ -20,8 +20,13 @@ jobs:
         with:
           python-version: 3.8.3
 
+      - name: check version
+        run: echo python --version |
+             echo pip --version
+
       - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1
+#         ru: dschep/install-pipenv-action@v1
+        run: pip install pipenv
 
       - name: Install dependencies via pipenv
         run: pipenv install
