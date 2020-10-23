@@ -2,7 +2,7 @@ name: newsletter_every_fri
 
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, synchronize]
 
   repository_dispatch:
     types: manual-trigger
