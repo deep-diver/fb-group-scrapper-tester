@@ -14,20 +14,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
+
       - name: Install pipenv
-        uses: dschep/install-pipenv-action@v1        
+        uses: dschep/install-pipenv-action@v1
+
+      - name: Install dependencies via pipenv
+        run: pipenv install
 
       - name: Decrypt .env.gpg => .env
         env:
           SYMMETRIC_KEY: ${{ secrets.GPG_KEY }}
         run: gpg --quiet --batch --yes --decrypt --passphrase="$SYMMETRIC_KEY" --output=.env .env.gpg
-
-      - name: Install dependencies
-        run: pipenv install
 
       - name: Set Variables
         id: var
